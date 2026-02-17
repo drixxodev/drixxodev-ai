@@ -1,0 +1,89 @@
+{
+  "name": "drixxodev-ai",
+  "version": "1.4.1",
+  "description": "Complete collection of battle-tested AI configs — agents, skills, hooks, commands, and rules evolved over 10+ months of intensive daily use by an Anthropic hackathon winner. This package is designed to supercharge your AI development workflow, providing robust and proven components for various AI tasks.",
+  "keywords": [
+    "claude-code",
+    "ai",
+    "agents",
+    "skills",
+    "hooks",
+    "mcp",
+    "rules",
+    "claude",
+    "anthropic",
+    "tdd",
+    "code-review",
+    "security",
+    "automation",
+    "best-practices",
+    "cursor",
+    "cursor-ide",
+    "opencode"
+  ],
+  "author": {
+    "name": "Robert Chambliss",
+    "url": "https://x.com/drixxodev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drixxodev/drixxodev-ai.git"
+  },
+  "homepage": "https://github.com/drixxodev/drixxodev-ai#readme",
+  "bugs": {
+    "url": "https://github.com/drixxodev/drixxodev-ai/issues"
+  },
+  "files": [
+    ".cursor/",
+    ".opencode/commands/",
+    ".opencode/instructions/",
+    ".opencode/plugins/",
+    ".opencode/prompts/",
+    ".opencode/tools/",
+    ".opencode/index.ts",
+    ".opencode/opencode.json",
+    ".opencode/package.json",
+    ".opencode/tsconfig.json",
+    ".opencode/MIGRATION.md",
+    ".opencode/README.md",
+    "agents/",
+    "commands/",
+    "contexts/",
+    "examples/CLAUDE.md",
+    "examples/user-CLAUDE.md",
+    "examples/statusline.json",
+    "hooks/",
+    "mcp-configs/",
+    "plugins/",
+    "rules/",
+    "schemas/",
+    "scripts/ci/",
+    "scripts/hooks/",
+    "scripts/lib/",
+    "scripts/setup-package-manager.js",
+    "scripts/skill-create-output.js",
+    "skills/",
+    ".claude-plugin/plugin.json",
+    ".claude-plugin/README.md",
+    "install.sh",
+    "llms.txt"
+  ],
+  "bin": {
+    "drixxodev-ai-install": "install.sh"
+  },
+  "scripts": {
+    "postinstall": "echo '\\n  drixxodev-ai installed!\\n  Run: npx drixxodev-ai-install typescript\\n  Docs: https://github.com/drixxodev/drixxodev-ai\\n'",
+    "lint": "eslint . && markdownlint '**/*.md' --ignore node_modules",
+    "test": "node scripts/ci/validate-agents.js && node scripts/ci/validate-commands.js && node scripts/ci/validate-rules.js && node scripts/ci/validate-skills.js && node scripts/ci/validate-hooks.js && node tests/run-all.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.1.0",
+    "markdownlint-cli": "^0.47.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
