@@ -9,7 +9,7 @@ Every SuiteScript file must include this header:
 ```javascript
 /**
  * @NApiVersion 2.1
- * @copyright 2025 Terillium
+ * @copyright 2026 Terillium
  * @author Robert Chambliss <rchambliss@terillium.com>
  * @NScriptType [ScriptType]
  * @NModuleScope SameAccount
